@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport", content="width=device-width, intial-scale=0.1">
+        <title>assignment</title>
+    </head>
+    <body>
+        <script>
+            const cart = [
+  {
+    id: 1,
+    name: "Laptop",
+    price: 50000,
+    quantity: 1
+  },
+  {
+    id: 2,
+    name: "Mouse",
+    price: 800,
+    quantity: 2
+  },
+  {
+    id: 3,
+    name: "Keyboard",
+    price: 1500,
+    quantity: 1
+  },
+  {
+    id: 4,
+    name: "Headphones",
+    price: 2000,
+    quantity: 3
+  }
+];
+
+
+const Price = cart.reduce((total, item) => {
+  return total + item.price;
+}, 0);
+
+console.log(Price);
+
+const totalPrice = cart.reduce((total, item) => {
+  return total + item.price * item.quantity;
+}, 0);
+
+console.log("Total Price:", totalPrice);
+
+        </script>
+    </body>
+</html>
